@@ -13,20 +13,6 @@ public class Main {
         ProgrammingBook pr2 = new ProgrammingBook(3,"Lico",3000,"người Anh","java","green");
         ProgrammingBook pr3 = new ProgrammingBook(8,"Lico",5000,"người Anh","web","red");
 
-        Book[] boks = new Book[3];
-        boks[0] = new Book();
-        boks[1] = new FictionBook();
-        boks[2] = new ProgrammingBook();
-
-        int count = 0;
-        for (Book b : boks){
-            if (b instanceof FictionBook){
-                FictionBook fb = (FictionBook) b;
-                System.out.println("fb la chuyen cha thanh con" + fb);
-            }
-        }
-
-
 
         Book[] books = {fb1, fb2, fb3, pr1, pr2, pr3};
         int sum = 0;
@@ -46,17 +32,37 @@ public class Main {
         }
         System.out.println("Số sách có ngôn ngữ là java là: " + countst);
 
+
         String vt = "viễn tưởng";
         int countv = 0;
         FictionBook[] ficti = {fb1, fb2, fb3};
-        for (FictionBook fb : ficti) {
-           if (fb.getCategory().equals(vt)){
-               countv ++;
-           }
-        }
 
+        for (FictionBook fb : ficti) {
+            if (fb.getCategory().equals(vt)) {
+                countv++;
+            }
+        }
         System.out.println("Số sách có thể loại viễn tưởng là: " + countv);
 
+        int countFiction = 0;
+        int countProgramming = 0;
+        for (Book book : books) {
+            if (book instanceof FictionBook) {
+                FictionBook fb = (FictionBook) book;
+                if (fb.getCategory().equals("viễn tưởng")) {
+                    countFiction++;
+                }
+            } else if (book instanceof ProgrammingBook) {
+                ProgrammingBook pr = (ProgrammingBook) book;
+                if (pr.getLanguage().equals("java")) {
+                    countProgramming++;
+                }
+            }
+        }
+
+
+        System.out.println("Số sách có thể loại viễn tưởng là: " + countFiction);
+        System.out.println("Số sách có ngôn ngữ java là: " + countProgramming);
 
 
         FictionBook[] fcbook = {fb1,fb2,fb3};
