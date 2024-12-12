@@ -13,6 +13,20 @@ public class Main {
         ProgrammingBook pr2 = new ProgrammingBook(3,"Lico",3000,"người Anh","java","green");
         ProgrammingBook pr3 = new ProgrammingBook(8,"Lico",5000,"người Anh","web","red");
 
+        Book[] boks = new Book[3];
+        boks[0] = new Book();
+        boks[1] = new FictionBook();
+        boks[2] = new ProgrammingBook();
+
+        int count = 0;
+        for (Book b : boks){
+            if (b instanceof FictionBook){
+                FictionBook fb = (FictionBook) b;
+                System.out.println("fb la chuyen cha thanh con" + fb);
+            }
+        }
+
+
 
         Book[] books = {fb1, fb2, fb3, pr1, pr2, pr3};
         int sum = 0;

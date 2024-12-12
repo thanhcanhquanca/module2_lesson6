@@ -15,6 +15,10 @@ public class ProgrammingBook extends Book{
         this.framework = framework;
     }
 
+    public ProgrammingBook() {
+
+    }
+
     public String getLanguage() {
         return language;
     }

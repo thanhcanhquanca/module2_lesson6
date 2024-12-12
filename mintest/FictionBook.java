@@ -10,6 +10,10 @@ public class FictionBook extends Book{
         this.category = category;
     }
 
+    public FictionBook() {
+
+    }
+
     public String getCategory() {
         return category;
     }
