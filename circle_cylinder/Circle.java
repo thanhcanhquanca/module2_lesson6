@@ -28,6 +28,15 @@ public class Circle {
         this.coler = coler;
     }
 
+    public void acreage(){
+        this.radius = radius * 2;
+    }
 
-
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", coler='" + coler + '\'' +
+                '}';
+    }
 }
